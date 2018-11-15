@@ -11,8 +11,7 @@
 
   <body>
   <% if user_signed_in? %>
-  <% binding.pry %>
-    <h2><%= "welcome" %></h2>
+    <h2><%= "Welcome back #{current_user.user_name}" %></h2>
   <% end %>
 
     <% if notice %>

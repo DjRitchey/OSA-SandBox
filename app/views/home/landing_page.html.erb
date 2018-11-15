@@ -2,6 +2,7 @@
   <h4>Please log in using Devise</h4>
   <button><%= link_to "Register now!", new_user_registration_path %></button>
   <button><%= link_to "Sign in!", new_user_session_path %></button>
+  <button><%= link_to "Log out!", destroy_user_session_path, :method => 'delete'%></button>
 
   <p>
     You can also make some posts as well!
