@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+OSA-Sandbox
 
-Things you may want to cover:
+devise users model
 
-* Ruby version
+add posts as model
 
-* System dependencies
+scale for additional models
 
-* Configuration
+use jbuilder to build something like this to start, i would like to add some nested data to this.
 
-* Database creation
+{
+  user: [
+    {post1: content },
+    {post2: content }
+  ],
+}
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+deploy to aws for now
