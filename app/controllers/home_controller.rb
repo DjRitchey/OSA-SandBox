@@ -13,4 +13,8 @@ class HomeController < ApplicationController
     render :time_fiddler
   end
 
+  def verify_phone
+
+  end 
+
 end
