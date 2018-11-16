@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/users/:id' => 'users#show'
   get '/users' => 'users#index'
 
+  get '/time_fiddler' => 'home#time_fiddler'
+  post '/time_fiddler' => 'home#time_fiddler'
 
 
 
