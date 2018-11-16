@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+
   devise_for :users
   resources :posts
+  root to: "home#landing_page"
+
+  get '/users/:id' => 'users#show'
+  get '/users' => 'users#index'
 
 
-
-    root to: "home#landing_page"
 
 
 

@@ -8,11 +8,15 @@ class PostsController < ApplicationController
   def new
     @user = current_user
     @post = Post.new
+    @categories = Category.all.map{|c| [c.tag, c.id]}
+
   end
 
   def create
     @post = Post.new(post_params)
     if @post.save
+      binding.pry
+      current_user.posts << @post
       redirect_to posts_path
     else
       render new_post_path
@@ -23,7 +27,7 @@ class PostsController < ApplicationController
 private
 
   def post_params
-    params.require(:post).permit(:user_id, :title, :subtitle, :content)
+    params.require(:post).permit(:user_id, :title, :subtitle, :content, :category_id)
   end
 
 end
