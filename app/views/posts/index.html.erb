@@ -5,4 +5,5 @@
   <%= post.subtitle %>
   <%= "By: #{User.find_by(id: post.user_id).user_name}" %> <br/>
   <%= post.content %>
+  <h3><%= post.audits.inspect %></h3>
 <% end %>
