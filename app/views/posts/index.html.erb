@@ -4,6 +4,10 @@
   <%= post.title %>
   <%= post.subtitle %>
   <%= "By: #{User.find_by(id: post.user_id).user_name}" %> <br/>
-  <%= post.content %>
+  <%= post.content %> <br  />
+  <% post.categories.each do |category| %>
+  Tags: <%= category.tag %>
+  <% end %>
+  <%= link_to "Edit", edit_post_path(post.id) %>
   <h3><%= post.audits.inspect %></h3>
 <% end %>

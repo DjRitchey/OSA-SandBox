@@ -24,7 +24,7 @@
 
 <div class="field">
   <%= f.label :categories %><br />
-  <%= select_tag(:category_id, options_for_select(@categories)) %>
+  <%= f.collection_select(:category_ids, Category.all, :id, :tag) %>
 </div>
 
 <%= f.submit "Click to submit!" %>
