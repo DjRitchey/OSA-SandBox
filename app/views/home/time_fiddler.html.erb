@@ -1,0 +1,11 @@
+<%= form_tag "/time_fiddler", multipart: true %>
+  <%= label_tag(:time, "Ask for a day!") %>
+  <%= text_field_tag(:time)  %>
+<%= submit_tag "Change!" %>
+
+
+<% if @display.nil? %>
+<%= "What will you see?" %>
+<% end %>
+
+<%= @display unless @display.nil? %>
